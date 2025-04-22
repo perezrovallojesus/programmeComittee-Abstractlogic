@@ -1,0 +1,196 @@
+/* * {
+    outline: 1px solid red;
+} */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #FDFCFF;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    width: 100%;
+    background-color: #00ABEF;
+    color: white;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 100%; 
+    object-fit: contain; /*Evita deformación del logo */
+}
+
+.event-text h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.event-text p {
+    font-size: 14px;
+    margin: 2px 0 0;
+}
+
+.login-btn {
+    background-color: white;
+    color: #818181;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #f2f2f3;
+}
+
+.main-content {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+  
+.sidebar {
+    width: 230px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    z-index: 5; /* Muestra la sombra por encima de la barra de steps */
+}
+
+  /* Menú */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%; /* Asegura que ocupe todo el alto del sidebar */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 11px 12px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #818181;
+    text-decoration: none;
+    font-size: 14px; 
+    font-weight: 400;
+    transition: all 0.2s ease;
+    gap: 8px;
+}
+
+.menu .logout {
+    margin-top: auto; /* Empuja el logout hacia abajo */
+}
+
+.menu-item:hover {
+    background-color: #F0F4F8;
+}
+
+.menu-item.selected {
+    color: white;
+    background-color: #00ABEF;
+}
+
+.menu-item:hover.selected  {
+    background-color: #00ABEF;
+    color: #ffffff;
+}
+
+/* Estilos de iconos */
+.menu-icon {
+
+}
+
+.content{
+    width: calc(100vw - 230px);
+}
+
+.steps-bar {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background-color: #FDFCFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+  
+.step {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding: 12px 12px;
+    border: 1px solid rgba(192, 192, 192, .75);
+    border-radius: 5px;
+    background-color: white;
+    color: #6B6B6B;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.step:hover {
+    background-color: #f2f2f3;
+}
+
+.step.active {
+    border-color: rgba(0, 171, 239, .75);
+    color: #00ABEF;
+}
+
+.step.active:hover {
+    background-color: #FDFCFF;
+}
+
+svg.next {
+    margin: auto 5px;
+}
+
+.iframe-container {
+    padding: 20px;  
+}
+
+.iframe-container > p{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #6B6B6B;
+    font-size: 14px;
+}
+
+.iframe-placeholder {
+    background-color: #F0F0F2;
+    box-shadow: inset 1px 1px 10px 0px rgba(0,0,0,0.1);
+    height: 585px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 32px;
+    border-radius: 10px;
+}
